@@ -26,27 +26,27 @@ do {
 
                 } else {
                     console.log("Valor inicial " + precio)
-                    alert("Le tenes que cargar $" + (acumulador + precio))
+                    alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
                     console.log("Le tenes que cargar $" + (acumulador + precio))
                     continuar = prompt("Desea seguir calculando?").toLowerCase()
                 }
 
             } else {
                 console.log("Valor inicial " + precio)
-                alert("Le tenes que cargar $" + (acumulador + precio))
+                alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
                 console.log("Le tenes que cargar $" + (acumulador + precio))
                 continuar = prompt("Desea seguir calculando?").toLowerCase()
             }
 
         } else {
             console.log("Valor inicial " + precio)
-            alert("Le tenes que cargar $" + (acumulador + precio))
+            alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
             console.log("Le tenes que cargar $" + (acumulador + precio))
             continuar = prompt("Desea seguir calculando?").toLowerCase()
         }
     } else {
         console.log("Valor inicial " + precio)
-        alert("Le tenes que cargar $" + precio)
+        alert("Le tenes que cargar $" + precio + "\n El cliente pagara $" + precio)
         console.log("Le tenes que cargar $" + precio)
         continuar = prompt("Desea seguir calculando?").toLowerCase()
     }
