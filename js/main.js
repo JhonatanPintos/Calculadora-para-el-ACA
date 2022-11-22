@@ -1,13 +1,14 @@
 let descuento = 0.05
 let continuar
 
-do {
     const porsentaje = (a, b) => a * b
-    let precio = parseInt(prompt("Ingrese un monto"))
-    const socio = prompt("Es socio?").toLocaleLowerCase()
-    console.log("Es socio? " + socio)
+    const socio = document.querySelector("#botonHtml")
+    socio.onclick = () => {
+        calcular()
+    }
 
-    if (socio == "si") {
+    const calcular = () => {
+        const precio = parseFloat(document.querySelector("#datosHtml").value)
         let acumulador = 0
         let resultado1 = (porsentaje(precio, descuento))
         acumulador += resultado1
@@ -25,30 +26,23 @@ do {
                     acumulador += resultado4
 
                 } else {
+                    let total = (precio + acumulador).toFixed(2)
                     console.log("Valor inicial " + precio)
-                    alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
-                    console.log("Le tenes que cargar $" + (acumulador + precio))
-                    continuar = prompt("Desea seguir calculando?").toLowerCase()
+                    alert("Le tenes que cargar $" + (total) + "\n El Socio tendra que pagar $" + ((total)-(total)*descuento).toFixed(2))
+                    console.log("Le tenes que cargar $" + (total))
                 }
 
             } else {
+                let total = (precio + acumulador).toFixed(2)
                 console.log("Valor inicial " + precio)
-                alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
-                console.log("Le tenes que cargar $" + (acumulador + precio))
-                continuar = prompt("Desea seguir calculando?").toLowerCase()
+                alert("Le tenes que cargar $" + (total) + "\n El Socio tendra que pagar $" + ((total)-(total)*descuento).toFixed(2))
+                console.log("Le tenes que cargar $" + (total))
             }
 
         } else {
+            let total = precio + acumulador
             console.log("Valor inicial " + precio)
-            alert("Le tenes que cargar $" + (acumulador + precio) + "\n El Socio tendra que pagar $" + ((acumulador + precio)-(precio + acumulador)*descuento))
-            console.log("Le tenes que cargar $" + (acumulador + precio))
-            continuar = prompt("Desea seguir calculando?").toLowerCase()
+            alert("Le tenes que cargar $" + (total) + "\n El Socio tendra que pagar $" + ((total)-(total)*descuento).toFixed(2))
+            console.log("Le tenes que cargar $" + (total))
         }
-    } else {
-        console.log("Valor inicial " + precio)
-        alert("Le tenes que cargar $" + precio + "\n El cliente pagara $" + precio)
-        console.log("Le tenes que cargar $" + precio)
-        continuar = prompt("Desea seguir calculando?").toLowerCase()
     }
-} while (continuar != "no")
-alert("Gracias por utilizar nuestra aplicacion")

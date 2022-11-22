@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+
+.contenedorTot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+h1{
+    color: yellow;
+}
+h1:hover{
+    color: red;
+}
+
+.datos {
+    text-align: center;
+    width: 500px;
+    height: 40px;
+    border: 2px solid yellow;
+    border-radius: 30px;
+    overflow: hidden;
+    outline: none; }
+    .datos:hover {
+      border: 2px solid red; }
+    .datos::placeholder {
+      text-align: center; }  
+
+.boton, .boton:hover {
+    height: 40px;
+    background-color: yellow;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px; }
+    .boton:hover {
+      background-color: red;
+      color: yellow; }
+
+.div{
+    color: yellow;
+}
+
+.div:hover{
+    color: red;
+}
